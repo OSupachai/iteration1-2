@@ -1,0 +1,35 @@
+%h1#head
+  %div#logo
+    %div#message
+    %div
+  %div
+%h1
+%h1#body
+  %input{border: "0", name: "submit", src: "assets/images/bottom4.png", style: " margin: 20px 0px 0px 50px", title: "add", type: "image"}/
+  %table#jobs
+    
+    %tr
+      %th Company
+      %th Detail
+      %th Deadline
+      %th Link
+      
+    - @jobs.each do |job|
+      %tr
+        %td= job.company_name
+        %td
+          = job.position
+          %br
+          = job.numb 
+          %a position(s)
+          %br
+          = job.province
+        %td= job.deadline
+        %td= link_to job.company_name , job.link
+
+%h1
+
+%div#footer
+%div
+
+

@@ -1,0 +1,29 @@
+%h1 New monkey
+
+= form_tag monkeys_path do
+
+  = label :job, :company_name, 'Company Name'
+  = text_field :job, 'company_name'
+  %br
+  = label :job, :province, 'Location'
+  = text_field :job, 'province'
+  %br
+  = label :job, :position, 'Position'
+  = text_field :job, 'position'
+  %br
+  = label :job, :qualification, 'Qualification'
+  = text_field :job, 'qualification'
+  %br
+  = label :job, :numb, 'Number of admission'
+  = text_field :job, 'numb'
+  %br
+  = label :job, :start_date, 'Start Date'
+  = date_select :job, :start_date
+  %br
+  = label :job, :deadline, 'Deadline'
+  = date_select :job, :deadline
+  %br
+  = label :job, :link, 'Link'
+  = string :job ,'link'
+
+  = submit_tag 'Save Changes'

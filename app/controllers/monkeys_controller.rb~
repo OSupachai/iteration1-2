@@ -1,0 +1,15 @@
+class MonkeysController < ApplicationController
+  def index
+   @jobs =Job.all
+  end
+
+  def new
+   
+  end
+
+  def create
+    @jobs = Job.create!(params[:job])
+    @jobs.save!
+    redirect_to monkeys_path('')
+  end
+end

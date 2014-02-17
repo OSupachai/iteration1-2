@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @monkey.title
+%p
+  %b Text:
+  = @monkey.text
+
+= link_to 'Edit', edit_monkey_path(@monkey)
+\|
+= link_to 'Back', monkeys_path
